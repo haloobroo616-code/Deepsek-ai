@@ -1,0 +1,6 @@
+{
+  "name": "DeepSeek Chat",
+  "description": "A functional AI chat interface powered by an external endpoint utilizing the DeepSeek model.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
