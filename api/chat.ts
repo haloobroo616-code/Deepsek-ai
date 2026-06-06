@@ -1,8 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
-import crypto from "node:crypto";
 
 export const config = {
-  runtime: 'edge', // Using Edge runtime for better performance, or 'node'
+  runtime: 'edge', // Required for standard Request/Response usage
 };
 
 function uuid() {
@@ -22,7 +21,7 @@ export default async function handler(req: Request) {
     }
 
     const conversationId = uuid();
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "AIzaSyCrzIl0CP3-rUgNZmTy065TdH3MCn4SDOc" });
     
     const contents = (history || []).map((item: any) => {
        return [

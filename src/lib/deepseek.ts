@@ -12,7 +12,7 @@ export async function DeepSeekThinking(
   const conversationId = uuid();
   
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "AIzaSyCrzIl0CP3-rUgNZmTy065TdH3MCn4SDOc" });
     
     // Convert history into Gemini expected format
     const contents = history.map((item) => {
